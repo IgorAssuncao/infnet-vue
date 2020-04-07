@@ -1,7 +1,7 @@
 <template>
   <div>
     <v-btn>
-      <router-link :to="{name: 'PlanetCreate'}">Create Planet</router-link>
+      <router-link :to="{ name: 'PlanetCreate' }">Create Planet</router-link>
     </v-btn>
     <div class="main-list">
       <v-list>
@@ -22,12 +22,15 @@ import { mapGetters, mapActions } from "vuex";
 
 export default {
   name: "PlanetsList",
-  computed: mapGetters(["getPlanets"]),
+  computed: mapGetters(["getPlanets", "getFirstTime"]),
   methods: {
-    ...mapActions(["fetchPlanets"])
+    ...mapActions(["fetchPlanets", "changeFirstTime"])
   },
   created() {
-    this.fetchPlanets();
+    if (this.getFirstTime) {
+      this.fetchPlanets();
+      this.changeFirstTime();
+    }
   }
 };
 </script>

@@ -4,12 +4,12 @@
     Climate: {{ getPlanetByName(this.name).climate }}
     Terrain: {{ getPlanetByName(this.name).terrain }}
     Population: {{ getPlanetByName(this.name).population }}
-    <router-link :to="{ name:'PlanetEdit', params: { name: this.name }}">
-      <v-btn>Edit</v-btn>
-    </router-link>
-    <router-link :to="{ name:'PlanetDelete', params: { name: this.name }}">
-      <v-btn>Delete</v-btn>
-    </router-link>
+    <v-btn>
+      <router-link :to="{ name:'PlanetEdit' }">Edit</router-link>
+    </v-btn>
+    <v-btn>
+      <router-link :to="{ name:'PlanetDelete' }">Delete</router-link>
+    </v-btn>
   </div>
 </template>
 
