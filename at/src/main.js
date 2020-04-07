@@ -22,8 +22,8 @@ Vue.use(VueAxios, axiosClient);
 Vue.config.productionTip = false;
 
 new Vue({
+  vuetify,
   router,
   store,
-  vuetify,
   render: (h) => h(App),
 }).$mount("#app");

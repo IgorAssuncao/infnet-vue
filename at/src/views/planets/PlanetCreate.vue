@@ -1,8 +1,8 @@
 <template>
   <div>
-    <v-container>
-      <h1>OIASOIOIOIA</h1>
-    </v-container>
+    <v-row>
+      <v-form> </v-form>
+    </v-row>
   </div>
 </template>
 
@@ -13,15 +13,14 @@ export default {
   data() {
     return {
       planet: {
-        name: ""
-      }
+        name: "",
+      },
     };
   },
   methods: {
-    ...mapActions(["createPlanet"])
-  }
+    ...mapActions(["createPlanet"]),
+  },
 };
 </script>
 
-<style>
-</style>
+<style></style>

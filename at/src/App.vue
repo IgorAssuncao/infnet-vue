@@ -1,8 +1,8 @@
 <template>
-  <div id="app">
-    <Header id="header" />
-    <Main id="main" />
-    <Footer id="footer" />
+  <div>
+    <Header class="child" />
+    <Main class="child" />
+    <Footer class="child" />
   </div>
 </template>
 
@@ -16,23 +16,16 @@ export default {
   components: {
     Footer,
     Header,
-    Main
-  }
+    Main,
+  },
 };
 </script>
 
-<style>
-#app {
-  color: #2f2f2f;
+<style scoped>
+div {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   margin: 0;
-}
-
-#app #header,
-#main,
-#footer {
-  margin: 0.5rem;
 }
 </style>

@@ -1,6 +1,13 @@
 <template>
   <div>
-    <v-btn class="ma-2" dark color="blue" v-on:click="handleDeletePlanetClick">Are you sure?</v-btn>
+    <v-btn
+      class="ma-2"
+      rounded
+      dark
+      color="primary"
+      v-on:click="handleDeletePlanetClick"
+      >Are you sure?</v-btn
+    >
   </div>
 </template>
 
@@ -14,10 +21,9 @@ export default {
     handleDeletePlanetClick() {
       this.deletePlanet(this.$route.params.name);
       this.$router.push({ name: "PlanetsHome" });
-    }
-  }
+    },
+  },
 };
 </script>
 
-<style>
-</style>
+<style></style>
