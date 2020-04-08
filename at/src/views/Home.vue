@@ -10,7 +10,10 @@
 
     <br />
     <h4>
-      <a class="secondary--text" href="">GitHub Repo</a>
+      <a
+        class="secondary--text"
+        href="https://github.com/IgorAssuncao/infnet-vue/tree/master/at"
+      >GitHub Repo</a>
     </h4>
 
     <br />
@@ -33,23 +36,23 @@ export default {
       stack: [
         {
           name: "Vue.js",
-          url: "https://vuejs.org/",
+          url: "https://vuejs.org/"
         },
         {
           name: "Vuetify.js",
-          url: "https://vuetifyjs.com/",
+          url: "https://vuetifyjs.com/"
         },
         {
           name: "Git",
-          url: "https://git-scm.com/",
+          url: "https://git-scm.com/"
         },
         {
           Name: "GitHub",
-          url: "https://github.com",
-        },
-      ],
+          url: "https://github.com"
+        }
+      ]
     };
-  },
+  }
 };
 </script>
 
