@@ -1,12 +1,10 @@
 <template>
   <div class="main-div">
-    <v-row justify="center">
-      <v-dialog persistent>
-        Are you sure?
-        <v-btn color="error" @click="handleDeletePlanet"></v-btn>
-        <v-btn color="cancel" @click="handleCancel"></v-btn>
-      </v-dialog>
-    </v-row>
+    <p class="secondary--text item">Are you sure?</p>
+    <p class="item">
+      <v-btn color="confirm primary--text" class="button" @click="handleDeletePlanet">Confirm</v-btn>
+      <v-btn color="cancel primary--text" class="button" @click="handleCancel">Cancel</v-btn>
+    </p>
   </div>
 </template>
 
@@ -24,12 +22,19 @@ export default {
     },
     handleCancel() {
       this.$router.push({ name: "PlanetsHome" });
-    },
-  },
+    }
+  }
 };
 </script>
 
 <style scoped>
 .main-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.button {
+  margin: 0 0.5rem;
 }
 </style>
