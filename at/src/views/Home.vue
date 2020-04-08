@@ -47,8 +47,8 @@ export default {
           url: "https://git-scm.com/"
         },
         {
-          Name: "GitHub",
-          url: "https://github.com"
+          name: "GitHub",
+          url: "https://github.com/"
         }
       ]
     };
