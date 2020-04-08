@@ -1,9 +1,11 @@
 <template>
-  <div>
-    <Header class="child" />
-    <Main class="child" />
-    <Footer class="child" />
-  </div>
+  <v-app>
+    <Header />
+    <v-content class="main-component">
+      <Main />
+    </v-content>
+    <Footer />
+  </v-app>
 </template>
 
 <script>
@@ -22,10 +24,7 @@ export default {
 </script>
 
 <style scoped>
-div {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  margin: 0;
+.main-component {
+  margin: 1rem 2rem;
 }
 </style>

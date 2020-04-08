@@ -1,13 +1,9 @@
 <template>
-  <div color="primary">
-    <v-footer absolute color="primary">
-      <v-card
-        flat
-        tile
-        width="100%"
-        class="gold lighten-1 text-center"
-      ></v-card>
-      <p class="text-center">Developed by Igor Assuncao</p>
+  <div>
+    <v-footer>
+      <v-card-text class="secondary--text font-weight-bold"
+        >Developed by Igor Assuncao</v-card-text
+      >
     </v-footer>
   </div>
 </template>

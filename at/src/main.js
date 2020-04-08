@@ -1,5 +1,6 @@
+import "@mdi/font/css/materialdesignicons.css";
 import axios from "axios";
-import "material-design-icons-iconfont/dist/material-design-icons.css";
+import "roboto-fontface/css/roboto/roboto-fontface.css";
 import Vue from "vue";
 import VueAxios from "vue-axios";
 import App from "./App.vue";

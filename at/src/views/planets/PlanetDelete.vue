@@ -1,13 +1,12 @@
 <template>
-  <div>
-    <v-btn
-      class="ma-2"
-      rounded
-      dark
-      color="primary"
-      v-on:click="handleDeletePlanetClick"
-      >Are you sure?</v-btn
-    >
+  <div class="main-div">
+    <v-row justify="center">
+      <v-dialog persistent>
+        Are you sure?
+        <v-btn color="error" @click="handleDeletePlanet"></v-btn>
+        <v-btn color="cancel" @click="handleCancel"></v-btn>
+      </v-dialog>
+    </v-row>
   </div>
 </template>
 
@@ -18,12 +17,19 @@ export default {
   name: "PlanetDelete",
   methods: {
     ...mapActions(["deletePlanet"]),
-    handleDeletePlanetClick() {
+    handleDeletePlanet() {
       this.deletePlanet(this.$route.params.name);
+      alert("Success");
+      this.$router.push({ name: "PlanetsHome" });
+    },
+    handleCancel() {
       this.$router.push({ name: "PlanetsHome" });
     },
   },
 };
 </script>
 
-<style></style>
+<style scoped>
+.main-div {
+}
+</style>

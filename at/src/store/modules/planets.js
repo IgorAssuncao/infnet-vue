@@ -10,12 +10,12 @@ const getters = {
 const mutations = {
   EDIT_FIRSTTIME: (state) => (state.firstTime = false),
   FETCH_PLANETS: (state, planets) => (state.planets = planets),
-  SAVE_PLANET: (state, planet) => state.planets.push(planet),
+  SAVE_PLANET: (state, newPlanet) => state.planets.push(newPlanet),
   EDIT_PLANET: (state, newPlanet) => {
     const index = state.planets.findIndex(
       (planet) => planet.name === newPlanet.name
     );
-    if (index < 0) return state.planets.splice(index, 1, newPlanet);
+
     state.planets[index] = newPlanet;
   },
   DELETE_PLANET: (state, planetName) =>
