@@ -8,7 +8,7 @@ import vuetify from "./plugins/vuetify";
 import router from "./router";
 import store from "./store";
 
-const baseUrl = "https://swapi.co/api/";
+const baseUrl = process.env.SWAPI_URL || "https://swapi.dev/api/";
 
 const axiosClient = axios.create({
   baseUrl,
